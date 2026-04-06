@@ -146,7 +146,7 @@ def main():
                 if estado_jogo == "JOGANDO":
                     logica.pular(jogador)
 
-            if estado_jogo == "GAME_OVER" and evento.type == pygame.KEYDOWN and evento.key == pygame.K_SPACE:  
+            if estado_jogo == "GAME_OVER" and (evento.type == pygame.KEYDOWN and evento.key == pygame.K_SPACE):  
                 jogador = logica.criar_jogador(50, altura_tela // 2)
                 fundo_x = 0
                 lista_tubos.clear()
