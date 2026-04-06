@@ -142,17 +142,17 @@ def main():
                         estado_jogo = "MENU"
 
 
-                if (evento.type == pygame.KEYDOWN and evento.key in (pygame.K_SPACE, pygame.K_UP)) or (evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1):
-                    if estado_jogo == "JOGANDO":
-                        logica.pular(jogador)
+            if (evento.type == pygame.KEYDOWN and evento.key in (pygame.K_SPACE, pygame.K_UP)) or (evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1):
+                if estado_jogo == "JOGANDO":
+                    logica.pular(jogador)
 
-                    elif estado_jogo == "GAME_OVER":
-                        jogador = logica.criar_jogador(50, altura_tela // 2)
-                        fundo_x = 0
-                        lista_tubos.clear()
-                        pontuacao = 0
-                        temporizador_tubos = 0
-                        estado_jogo = "JOGANDO"
+            if estado_jogo == "GAME_OVER" and evento.type == pygame.KEYDOWN and evento.key == pygame.K_SPACE:  
+                jogador = logica.criar_jogador(50, altura_tela // 2)
+                fundo_x = 0
+                lista_tubos.clear()
+                pontuacao = 0
+                temporizador_tubos = 0
+                estado_jogo = "JOGANDO"
 
 
         if estado_jogo == "JOGANDO":
