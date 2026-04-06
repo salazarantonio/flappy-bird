@@ -7,7 +7,7 @@ def main():
     pygame.init()
     tela = pygame.display.set_mode((largura_tela, altura_tela))
     pygame.display.set_caption("Zelda Flappy")
-    relogio = pygame. time.Clock()
+    relogio = pygame.time.Clock()
 
     
     link_original = pygame.image.load("assets/link.png").convert_alpha()
